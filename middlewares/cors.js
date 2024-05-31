@@ -1,21 +1,19 @@
-const allowedCors = [ 
-  "http://frront.nomorepartiesco.ru/",
-  "https://baack.nomorepartiesco.ru/"
- ];
+ const allowedCors = [
+  'https://practicum.yandex.ru/',
+  'https://students-projects.ru/',
+  'http://frront.nomorepartiesco.ru/',
+  'http://localhost:3001/'
 
-const cors = (request, response, next) => {
-    const { origin } = request.headers;
-  
-    if (allowedCors.includes(origin)) {
-      response.header('Access-Control-Allow-Origin', "*");
-      response.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS');
-      response.header(
-        'Access-Control-Allow-Headers',
-        'Content-type,Authorization,Accept,X-Custom-Header',
-      );
-    }
-  
-    next();
-  };
-  
-  module.exports = cors;
+];
+function cors(req, res, next) {
+  const { origin } = req.headers;
+  if (allowedCors.includes(origin)){
+      res.header('Access-Control-Allow-Origin', origin);
+  }
+  res.header("Access-Control-Allow-Methods", "GET,HEAD,PUT,PATCH,POST,DELETE");
+  res.header("Access-Control-Allow-Headers", "Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers, Authorization");
+  next()
+}
+module.exports = {
+  cors
+}

@@ -2,7 +2,7 @@
 
 const allowedCors = [
   'https://baack.nomorepartiesco.ru/',
-  'http://frront.nomorepartiesco.ru/'
+  'https://frront.nomorepartiesco.ru/'
 ];
 
 function cors(req, res, next) {

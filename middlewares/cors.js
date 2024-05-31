@@ -2,7 +2,6 @@
 // Можно ещё не удалять адреса с localhost, но мы удалили для краткости
 const allowedCors = [
   "http://frront.nomorepartiesco.ru/",
-  "http://baack.nomorepartiesco.ru",
   "http://localhost:3001",
   "http://localhost:3000",
 ];

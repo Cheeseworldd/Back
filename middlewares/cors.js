@@ -1,7 +1,8 @@
 // Вместо нашего адреса вставь свой
 // Можно ещё не удалять адреса с localhost, но мы удалили для краткости
 const allowedCors = [
-  "https://lllirikka-frontand.nomoredomainswork.ru",
+  "http://frront.nomorepartiesco.ru/",
+  "http://baack.nomorepartiesco.ru",
   "http://localhost:3001",
   "http://localhost:3000",
 ];
